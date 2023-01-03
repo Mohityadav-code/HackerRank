@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var stringList = ["aba", "baba", "aba", "xzxb"]
+    var queries = ["aba", "xzxb", "ab"]
+    var freq = []
+    for (var i = 0; i < queries.length; i++) {
+        var count = 0
+        for (var j = 0; j < stringList.length; j++) {
+            if (stringList[j] == queries[i]) {
+                count++
+            }
+        }
+        freq.push(count)
+    }
+    console.log(freq);
+</script>
+</html>
