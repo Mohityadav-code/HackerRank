@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr1=[1,2,3]
+    var arr2=[3,2,1]
+    var compare=[]
+    var arr1Score=0
+    var arr2Score=0
+    for(var i=0;i<arr1.length;i++){
+        if(arr1[i]>arr2[i]){
+            arr1Score++
+        }
+        if(arr1[i]<arr2[i]){
+            arr2Score++
+        }
+        
+    }
+    compare.push(arr1Score,arr2Score)
+    console.log(compare);
+    console.log(arr1Score,arr2Score);
+</script>
+</html>
