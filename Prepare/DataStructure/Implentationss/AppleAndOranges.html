@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://www.hackerrank.com/challenges/apple-and-orange/problem?isFullScreen=true&h_r=next-challenge&h_v=zen">hackerrank Question Link</a>
+<img src="https://s3.amazonaws.com/hr-challenge-images/25220/1474218925-f2a791d52c-Appleandorange2.png" alt="">
+</body>
+<script>
+    //     s: integer, starting point of Sam's house location.
+    // t: integer, ending location of Sam's house location.
+    // a: integer, location of the Apple tree.
+    // b: integer, location of the Orange tree.
+    var s = 7
+    var t = 11
+    var a = 5
+    var b = 15
+    var apples = [-2, 2, 1]
+    var oranges = [5, -6]
+    var orangecount = 0
+    var applecount = 0
+    for (var i = 0; i < apples.length; i++) {
+        pos = a + apples[i]
+        if (pos >= s && pos <= t) {
+            applecount++
+        }
+    }
+    for (var i = 0; i < oranges.length; i++) {
+        pos = b + oranges[i]
+        if (pos <= t && pos >= s) {
+            orangecount++
+        }
+    }
+    console.log(orangecount, applecount)
+</script>
+
+</html>
