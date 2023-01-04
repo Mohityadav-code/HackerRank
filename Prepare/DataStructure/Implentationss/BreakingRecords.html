@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var score = [10, 5, 20, 20, 4, 5, 2, 25, 1]
+    var countmin = 0
+    var countmax = 0
+    var min = score[0]
+    var max = score[0]
+    var output=[]
+    for (var i = 0; i < score.length; i++) {
+        if (score[i] < min) {
+            console.log(min,score[i]);
+            min = score[i]
+            countmin++
+            console.log(countmin);
+        }
+        if (score[i] > max) {
+            console.log(max,score[i]);
+            max = score[i]
+            countmax++
+            console.log(countmax);
+        }
+    }
+    output.push(countmax,countmin)
+console.log(output);
+</script>
+
+</html>
