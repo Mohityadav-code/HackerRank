@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
 <script>
-    var s="12:05:45AM"
-    var h=""
-    var m=""
-    var sec=""
-    var format=""
-    for(var i=0;i<s.length;i++){
-        if(i<2) h+=parseInt(s[i])
-        else if(i>2&&i<5) m+=parseInt(s[i])
-        else if(i>5&&i<8) sec+=parseInt(s[i])
-        else if(i>7&&i<10) format+=(s[i])
+    //     Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
+    //           - 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
+    var s = "12:40:00AM"
+    var h = ""
+    var m = ""
+    var sec = ""
+    var format = ""
+    for (var i = 0; i < s.length; i++) {
+        if (i < 2) h += parseInt(s[i])
+        else if (i > 2 && i < 5) m += parseInt(s[i])
+        else if (i > 5 && i < 8) sec += parseInt(s[i])
+        else if (i > 7 && i < 10) format += (s[i])
     }
     console.log(h);
     console.log(m);
     console.log(sec);
     console.log(format);
-    if(format=="PM"&&h<12) h=parseInt(h)+12
-    if(format=="AM"&&h>=12) h=13-parseInt(h)
+    if (format == "PM" && h < 12) h = parseInt(h) + 12
+    if (format == "AM" && h >= 12) h = "00"
+    if (format == "PM" && h == 12 && m == 0 && sec == 0) h = 12
     console.log(h);
-    console.log(h+":"+m+":"+sec);
+    console.log(h + ":" + m + ":" + sec);
 
 </script>
+
 </html>
