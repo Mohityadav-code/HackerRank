@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = [1, 2, 3, 4, 5]
+    var arrcopy=[...arr]
+    var min=0
+    var max=0
+    var length=arr.length
+    for(var i=0;i<length-1;i++){
+        min+=(Math.min(...arr))
+        var index=arr.indexOf(Math.min(...arr))
+        arr.splice(index,1)
+        max+=(Math.max(...arrcopy))
+        var index2=arrcopy.indexOf(Math.max(...arrcopy))
+        arrcopy.splice(index2,1)
+    }
+console.log(min,max);
+</script>
+
+</html>
