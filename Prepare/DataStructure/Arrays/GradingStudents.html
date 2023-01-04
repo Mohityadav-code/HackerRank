@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var grades = [4, 73, 67, 38, 33];
+    for (var i = 0; i < grades.length; i++) {
+        remainder = grades[i] % 5
+        diff = 5 - remainder
+        if (diff < 3 && grades[i] >= 38) {
+            console.log(diff);
+            grades[i] = grades[i] + diff
+        }
+    }
+    console.log(grades);
+</script>
+
+</html>
