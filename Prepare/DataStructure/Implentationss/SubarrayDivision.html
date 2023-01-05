@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.warn("hello world");
+    var s = [1, 2, 1, 3, 2, 4, 0,1,3,1,2,2,3,3,3,2,2]
+    var d = 6
+    var m = 3
+    var count = 0
+    // here we have to add m numbers from s array and then we have to check if there sum is ==4 if yes then
+    // count++ else try for next number
+    // strategy 
+    //  if we go through every elements s[0] + s[1] then if it is equal to d then count++
+    // else s[1]+s[2] 
+    for (var i = 0; i < s.length; i++) {
+        var sum = 0
+        for (var j = 0; j < m; j++) {
+            var index = i + j
+            sum += s[index]
+        }
+        if (sum == d) {
+            count++
+        }
+    }
+    console.log('count: ', count);
+</script>
+
+</html>
