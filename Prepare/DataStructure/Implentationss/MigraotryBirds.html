@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = [2,3,2,3,4,4,1,2,3,2,3,4,4,4,4,4]
+    arr=arr.sort(function(a, b){return b-a});
+    console.log(arr);
+    var countarr = []
+    var prevcount = 0
+    var result=0
+    for (var i = 0; i < arr.length; i++) {
+        var count = 0
+        for (var j = 0; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+                console.log(arr[i],arr[j]);
+                count++
+                if (count > prevcount) {
+                    result=arr[i]
+                    prevcount=count
+                }
+            }
+        }
+        arr = arr.filter(item => item !== arr[i])
+    }
+    console.log('result: ', result);
+
+
+</script>
+
+</html>
